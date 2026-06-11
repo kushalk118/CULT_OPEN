@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const db = require('./config/database');
+const seed = require('./seed');
 
 const authRoutes = require('./routes/authRoutes');
 const assetRoutes = require('./routes/assetRoutes');
@@ -109,5 +110,6 @@ async function initDb() {
 
 app.listen(PORT, async () => {
   await initDb();
+  await seed();
   console.log(`Server is running on port ${PORT}`);
 });

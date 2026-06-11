@@ -158,10 +158,7 @@ async function seed() {
   }
 
   console.log('Database seeding finished successfully!');
-  process.exit(0);
+  return;
 }
 
-seed().catch(err => {
-  console.error('Error during database seeding:', err);
-  process.exit(1);
-});
+module.exports = seed;
