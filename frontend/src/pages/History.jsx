@@ -19,7 +19,7 @@ export default function History({ user }) {
       if (!res.ok) throw new Error('Failed to fetch borrowing history');
       const data = await res.json();
       
-      const historyData = data.filter(b => ['returned', 'rejected'].includes(b.status));
+      const historyData = data;
       setHistory(historyData);
     } catch (err) {
       setError(err.message || 'Error loading history');
@@ -34,7 +34,7 @@ export default function History({ user }) {
         {user.role === 'admin' ? 'Global Historical Allocations Log' : 'Your Borrowing History'}
       </h3>
       <p style={{ color: 'var(--text-secondary)', fontSize: '0.875rem', marginBottom: '1.5rem' }}>
-        Chronological audit record of completed returns and rejected resource requests.
+        View all your resource requests, active allocations, and completed transactions.
       </p>
 
       {error && <div className="error-banner">{error}</div>}
