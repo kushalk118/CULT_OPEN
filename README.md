@@ -92,7 +92,7 @@ cd frontend
 npm install
 npm run dev
 ```
-The frontend dev server will launch on `http://localhost:5173`. Open your browser and navigate to this address.
+The frontend dev server will launch on `https://cult-open.vercel.app/`. Open your browser and navigate to this address.
 
 ---
 
