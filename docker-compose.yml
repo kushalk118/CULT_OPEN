@@ -17,7 +17,7 @@ services:
     ports:
       - "5173:5173"
     environment:
-      - VITE_API_URL=http://localhost:5000
+      - VITE_API_URL=https://cult-open.onrender.com
     depends_on:
       - backend
     volumes:

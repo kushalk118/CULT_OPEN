@@ -65,7 +65,7 @@ Start the Express API server:
 ```bash
 npm run start
 ```
-The server will boot on `http://localhost:5000`.
+The server will boot on `https://cult-open.onrender.com`.
 
 #### 2. Setup Frontend
 Open a new terminal window, navigate to the `frontend` directory, install packages, and start Vite:

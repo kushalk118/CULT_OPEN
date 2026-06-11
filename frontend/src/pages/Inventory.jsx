@@ -38,7 +38,7 @@ export default function Inventory({ user }) {
     setLoading(true);
     try {
       const token = localStorage.getItem('token');
-      let url = 'http://localhost:5000/api/assets';
+      let url = 'https://cult-open.onrender.com/api/assets';
       const params = [];
       if (selectedCategory) params.push(`category=${encodeURIComponent(selectedCategory)}`);
       if (searchTerm) params.push(`search=${encodeURIComponent(searchTerm)}`);
@@ -67,7 +67,7 @@ export default function Inventory({ user }) {
     setSuccess('');
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/bookings', {
+      const res = await fetch('https://cult-open.onrender.com/api/bookings', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -102,8 +102,8 @@ export default function Inventory({ user }) {
       const token = localStorage.getItem('token');
       const isEdit = assetFormModal !== 'add';
       const url = isEdit 
-        ? `http://localhost:5000/api/assets/${assetFormModal.id}` 
-        : 'http://localhost:5000/api/assets';
+        ? `https://cult-open.onrender.com/api/assets/${assetFormModal.id}` 
+        : 'https://cult-open.onrender.com/api/assets';
       
       const method = isEdit ? 'PUT' : 'POST';
 
@@ -133,7 +133,7 @@ export default function Inventory({ user }) {
     setSuccess('');
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://localhost:5000/api/assets/${assetId}`, {
+      const res = await fetch(`https://cult-open.onrender.com/api/assets/${assetId}`, {
         method: 'DELETE',
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -175,7 +175,7 @@ export default function Inventory({ user }) {
   const openQrModal = async (asset) => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://localhost:5000/api/assets/${asset.id}`, {
+      const res = await fetch(`https://cult-open.onrender.com/api/assets/${asset.id}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await res.json();

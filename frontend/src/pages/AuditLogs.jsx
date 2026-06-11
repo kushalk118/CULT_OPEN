@@ -14,7 +14,7 @@ export default function AuditLogs() {
     setLoading(true);
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/audit/logs', {
+      const res = await fetch('https://cult-open.onrender.com/api/audit/logs', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (!res.ok) throw new Error('Failed to fetch system audit logs');

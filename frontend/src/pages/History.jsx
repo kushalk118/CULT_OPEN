@@ -13,7 +13,7 @@ export default function History({ user }) {
     setLoading(true);
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/bookings', {
+      const res = await fetch('https://cult-open.onrender.com/api/bookings', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (!res.ok) throw new Error('Failed to fetch borrowing history');

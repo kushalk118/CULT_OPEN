@@ -29,14 +29,14 @@ export default function Dashboard({ user }) {
       const headers = { 'Authorization': `Bearer ${token}` };
 
       // 1. Fetch Stats
-      const statsRes = await fetch('http://localhost:5000/api/dashboard/stats', { headers });
+      const statsRes = await fetch('https://cult-open.onrender.com/api/dashboard/stats', { headers });
       if (!statsRes.ok) throw new Error('Failed to load statistics');
       const statsData = await statsRes.json();
       setStats(statsData);
 
       // 2. Fetch Charts Data if Admin
       if (user.role === 'admin') {
-        const chartsRes = await fetch('http://localhost:5000/api/dashboard/charts', { headers });
+        const chartsRes = await fetch('https://cult-open.onrender.com/api/dashboard/charts', { headers });
         if (chartsRes.ok) {
           const chartsData = await chartsRes.json();
           setChartData(chartsData);

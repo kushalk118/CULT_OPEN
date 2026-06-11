@@ -21,7 +21,7 @@ export default function HealthTracking({ user }) {
     setLoading(true);
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/health', {
+      const res = await fetch('https://cult-open.onrender.com/api/health', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (!res.ok) throw new Error('Failed to fetch health report details');
@@ -50,7 +50,7 @@ export default function HealthTracking({ user }) {
     setSuccess('');
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/health/report', {
+      const res = await fetch('https://cult-open.onrender.com/api/health/report', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ export default function HealthTracking({ user }) {
     setSuccess('');
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/health/resolve', {
+      const res = await fetch('https://cult-open.onrender.com/api/health/resolve', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

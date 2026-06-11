@@ -28,7 +28,7 @@ export default function Bookings({ user }) {
     setLoading(true);
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/bookings', {
+      const res = await fetch('https://cult-open.onrender.com/api/bookings', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (!res.ok) throw new Error('Failed to fetch bookings list');
@@ -46,7 +46,7 @@ export default function Bookings({ user }) {
     setSuccess('');
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://localhost:5000/api/bookings/${bookingId}/status`, {
+      const res = await fetch(`https://cult-open.onrender.com/api/bookings/${bookingId}/status`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -70,7 +70,7 @@ export default function Bookings({ user }) {
     setSuccess('');
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://localhost:5000/api/bookings/${bookingId}/issue`, {
+      const res = await fetch(`https://cult-open.onrender.com/api/bookings/${bookingId}/issue`, {
         method: 'PATCH',
         headers: { 'Authorization': `Bearer ${token}` }
       });
@@ -92,7 +92,7 @@ export default function Bookings({ user }) {
     setSuccess('');
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://localhost:5000/api/bookings/${returnModal.id}/return`, {
+      const res = await fetch(`https://cult-open.onrender.com/api/bookings/${returnModal.id}/return`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json',
@@ -128,7 +128,7 @@ export default function Bookings({ user }) {
 
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://localhost:5000/api/assets/qr?qrCodeText=${encodeURIComponent(code)}`, {
+      const res = await fetch(`https://cult-open.onrender.com/api/assets/qr?qrCodeText=${encodeURIComponent(code)}`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await res.json();

@@ -25,7 +25,7 @@ export default function Navbar({ currentView, user }) {
     try {
       const token = localStorage.getItem('token');
       if (!token) return;
-      const res = await fetch('http://localhost:5000/api/audit/notifications', {
+      const res = await fetch('https://cult-open.onrender.com/api/audit/notifications', {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       if (res.ok) {
@@ -40,7 +40,7 @@ export default function Navbar({ currentView, user }) {
   const handleMarkAsRead = async (notifId) => {
     try {
       const token = localStorage.getItem('token');
-      const res = await fetch(`http://localhost:5000/api/audit/notifications/${notifId}/read`, {
+      const res = await fetch(`https://cult-open.onrender.com/api/audit/notifications/${notifId}/read`, {
         method: 'PATCH',
         headers: { 'Authorization': `Bearer ${token}` }
       });
