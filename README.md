@@ -4,6 +4,8 @@ Smart, full-stack asset management and logistics allocation platform designed fo
 
 This platform enables centralized inventory tracking, booking workflow pipelines, asset health logging, audit trails, and analytical visibility.
 
+##Live deployment link:
+https://cult-open.vercel.app/
 ---
 
 ## 🎨 Technology Stack
