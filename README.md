@@ -43,6 +43,15 @@ This platform enables centralized inventory tracking, booking workflow pipelines
    - Embedded QR scanner console simulator on the bookings manager tab.
 
 ---
+## Default Accounts
+
+Admin
+Email: admin@example.com
+Password: admin123
+
+Consumer
+Email: consumer@example.com
+Password: consumer123
 
 ## 🚀 Setup & Installation Instructions
 
