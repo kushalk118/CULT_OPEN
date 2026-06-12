@@ -108,3 +108,6 @@ To stop and teardown containers:
 ```bash
 docker-compose down
 ```
+## Team Members
+- Kattamuri Kushal
+- Rishik Vodnala
